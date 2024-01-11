@@ -39,7 +39,7 @@ cd Bilbao-SportAir
 - sudo service thingsboard start
 ### Web UI using the following link:
 
-- http://l0.172.117.104:8080/
+- http://10.172.117.104:8080/
 ## Requirements
 - Raspberry Pi with the necessary sensors and actuators.
 - Python 3.x installed on your Raspberry Pi.
