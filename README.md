@@ -1,50 +1,77 @@
-# IoT Project - Bilbao-SportAir
-This repository contains the source code and documentation for the final project of the IoT course.
+# IoT Project - Bilbao SportAir
+
+This repository hosts the complete source code and documentation for the Bilbao SportAir project, a comprehensive IoT solution developed as part of the IoT course. The project's primary focus is on environmental monitoring, specifically targeting temperature, humidity, and air quality metrics. This solution is particularly tailored for deployment in urban environments like Bilbao, where monitoring such parameters is crucial for maintaining a healthy, active lifestyle.
 
 ## Repository Contents
-- 'temhumTBCopia.py:' Script for reading and handling temperature and humidity data.
 
-- 'airqualityTBCopia.py:' Script for handling air quality data.
+- `temhumTBCopia.py:` Python script dedicated to the acquisition and processing of temperature and humidity data. This script interfaces with appropriate sensors connected to a Raspberry Pi, retrieves environmental data, and processes it for further use.
 
-- 'main.py:' Main file coordinating the functions of the above scripts.
+- `airqualityTBCopia.py:` This script is responsible for gathering and handling air quality data. Similar to the temperature and humidity script, it interacts with air quality sensors attached to the Raspberry Pi, ensuring accurate and real-time data acquisition.
 
+- `main.py:` The central script of the project, orchestrating the functions of the above scripts. It manages the workflow, ensuring seamless data collection, processing, and transmission to the designated platforms like ThingsBoard.
 
 ## Usage Instructions
-Clone this repository on your Raspberry Pi:
 
+To get started with the Bilbao-SportAir project, follow these steps:
 
-### Copy code
-git clone https://github.com/jonmaestre/Bilbao-SportAir.git
-cd Bilbao-SportAir
-## Open and modify the scripts as needed using the nano editor:
+1. **Clone Repository on Raspberry Pi:**
 
+   ```bash
+   git clone https://github.com/jonmaestre/Bilbao-SportAir.git
+   cd Bilbao-SportAir
+   ```
 
-### Copy code
-- nano temhumTBCopia.py
-- nano airqualityTBCopia.py
-- nano main.py
-### Make the necessary modifications and save the changes.
+2. **Modify Scripts:**
+   
+   Open and adjust the scripts as per your project requirements using the nano editor:
+   
+   ```bash
+   nano temhumTBCopia.py
+   nano airqualityTBCopia.py
+   nano main.py
+   ```
+   
+   Make the necessary modifications and save the changes.
 
-## Run the main script:
+3. **Run the Scripts:**
 
+   Execute the individual or main script based on your requirement:
+   
+   ```bash
+   sudo python3 temhumTBCopia.py # Executes the temperature script
+   sudo python3 airqualityTBCopia.py # Executes the air quality script
+   sudo python3 main.py # Executes both scripts and displays data in ThingsBoard
+   ```
+   
+   Ensure you have the necessary permissions to access system resources.
 
-### Copy code
-- 'sudo python3 temhumTBCopia.py': To execute the temperatura  file and show the datas 
-- 'sudo python3 airqualityTBCopia.py:'To execute the ai rquality file and show the datas 
-- 'sudo python3 main.py :' To execute both files and show in the ThingsBoard
-### Ensure you have the necessary permissions to access system resources.
+4. **ThingsBoard Access:**
 
-## ThingsBoard access
+   Start the ThingsBoard service and access the Web UI:
+   
+   ```bash
+   sudo service thingsboard start
+   ```
+   
+   Access the Web UI using the following link:
+   
+   `http://10.172.117.104:8080/`
 
-- sudo service thingsboard start
-### Web UI using the following link:
+## System Requirements
 
-- http://10.172.117.104:8080/
-## Requirements
-- Raspberry Pi with the necessary sensors and actuators.
+- Raspberry Pi (with Raspbian OS or similar) equipped with necessary sensors and actuators for temperature, humidity, and air quality measurement.
 - Python 3.x installed on your Raspberry Pi.
 
 ## Additional Content
-- We have also designed a Web Application.
-- You could download the zip called 'Web Bilbao_SportAir_Version'
-- Open the 'index.html' to visualize the entire webpage
+
+- **Web Application:**
+  
+  For a comprehensive view of the data, we've developed a Web Application. You can download it as 'Web Bilbao_SportAir_Version.zip'. Open the 'index.html' to access the full features of the webpage, which provides a user-friendly interface for data visualization and analysis.
+
+- **Community Support:**
+
+  We encourage community involvement and contributions. If you have suggestions for improvements or have developed additional features, please feel free to share them with the community by submitting pull requests or opening issues.
+
+## Project Vision
+
+Our vision with Bilbao-SportAir is to empower communities with real-time environmental data, fostering awareness and promoting healthier lifestyles. By making this technology accessible and easy to use, we aim to contribute to the broader goal of sustainable and smart city development.
