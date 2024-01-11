@@ -44,3 +44,7 @@ cd Bilbao-SportAir
 - Raspberry Pi with the necessary sensors and actuators.
 - Python 3.x installed on your Raspberry Pi.
 
+## Additional Content
+- We have also designed a Web Application.
+- You could download the zip called 'Web Bilbao_SportAir_Version'
+- Open the 'index.html' to visualize the entire webpage
